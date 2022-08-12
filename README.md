@@ -1,80 +1,70 @@
-# Klever - Junior Frontend Test
+# Getting Started with Create React App
 
-Hello, this is the Frontend test for junior developers from Klever. The objective is to analyze the skills of candidates, focusing on the core fundamentals of HTML, CSS, and JS.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Pages
+## Available Scripts
 
-All the pages image are in the `./screens` folder
+In the project directory, you can run:
 
-### 1) Home
+### `npm start`
 
-![Home](https://github.com/klever-io/frontend-junior-test/blob/master/screens/Home.jpg)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-#### Actions
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- When clicking on the "Add Token" button go to the "Add Token" page
-- When click on the icon "Edit" go to the "Edit Token" page
+### `npm test`
 
-### 2) Add Token
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-![Add Token](https://github.com/klever-io/frontend-junior-test/blob/master/screens/AddToken.jpg)
+### `npm run build`
 
-#### Form
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- The Token field is required
-- The Balance field is required
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-#### Actions
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- When clicking on the "Back" button go to the "Home" page
-- When clicking on the icon "Save" button
-  - Save the data in localStorage from Browser
-  - Navigate user to home page
+### `npm run eject`
 
-#### Bonus
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-- The Token name should be unique, the user shouldn't has token names repeated
-- Display the error messages from the form to the user
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### 3) Edit Token
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-![Edit Token](https://github.com/klever-io/frontend-junior-test/blob/master/screens/EditToken.jpg)
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-#### Actions
+## Learn More
 
-- When clicking on the "Back" button go to the "Home" page
-- When clicking on the "Save" button
-  - Save the data in localStorage
-  - Navigate user to home page
-- When clicking on the "Remove" button
-  - Remove the date from local storage
-  - Navigate user to home page
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-#### Bonus
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- When the user clicks on the "Remove" button should display an alert to the user to confirm the remotion.
-  - If confirmed, the token should be deleted
-  - If denied, the alert closes and the token not should be deleted,
+### Code Splitting
 
-## Assets
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-All assets are in the `./assets` folder
+### Analyzing the Bundle Size
 
-## Bonus
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-- Use the React Framework
-- Unit Tests
+### Making a Progressive Web App
 
-## FAQ
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-1. Can I just use HTML, CSS, JS?
+### Advanced Configuration
 
-- Yes
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-2. Can I use other javascript frameworks?
+### Deployment
 
-- Yes
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-3. Can I use some CSS framework like Bootstrap, Material UI?
+### `npm run build` fails to minify
 
-- Yes, and try to follow the proposed design
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
