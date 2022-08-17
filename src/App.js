@@ -1,13 +1,24 @@
-import Home  from "./components/Home";
-import Home2  from "./components/Home2";
-import './App.css';
-function App() {
+import React from 'react';
+import {Route, Link, Routes, useLocation} from 'react-router-dom';
+
+export default function App() {
+  // 👇️ with React router
+  const location = useLocation();
+
+  console.log('hash', location.hash);
+  console.log('pathnameaaaa', location.pathname);
+  console.log('search', location.search);
+
   return (
-    <div className="App">
-<Home/>
+    <div>
     </div>
   );
 }
 
-export default App;
- 
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
