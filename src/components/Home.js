@@ -3,7 +3,7 @@ import { Button,Col,Form,Row,COntainer} from 'react-bootstrap';
 import { useState,useEffect } from "react";
 
 
-const Home2=()=>{
+const Home=()=>{
     const [tokens,setTokens]=useState([])
 
 useEffect(()=>{
@@ -50,4 +50,4 @@ useEffect(()=>{
     )
 }
 
-export default Home2
+export default Home
