@@ -1,9 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button,Col,Form,Alert} from 'react-bootstrap';
+import { Button,Form,Alert} from 'react-bootstrap';
 import { Formik } from 'formik';
 import { useNavigate,useLocation } from "react-router-dom";
 import * as yup from 'yup';
 import { useState,useEffect } from 'react';
+import { Link} from 'react-router-dom';
 
 const Add=()=>{
   const [tokenError,setTokenError]=useState(false)
@@ -39,7 +40,7 @@ const Delete=()=>{
   localStorage.setItem('tokens', JSON.stringify(finalTokens));
   const uptadedTokens=JSON.parse(localStorage.getItem('tokens'));
   setFinalToken(JSON.stringify(uptadedTokens))
-  navigate('/home')
+  navigate('/')
 }
 
   return(
@@ -48,8 +49,9 @@ const Delete=()=>{
         <div  style={{display:'flex',flexDirection:'column',flexGap:'1rem'}} className="col-md-10 mx-auto col-lg-7"> 
         <div className='my-3' style={{display:'flex',justifyContent:'center'}}><h2>Klever</h2> </div>
         <div className='my-3' style={{display:'flex',justifyContent:'space-between'}}><h2>Wish Wallet</h2> </div>
-        <div className='my-3' style={{display:'flex',justifyContent:'space-between'}}><h5>Add Token</h5>
-        <Button className="w-10 btn btn-sm btn-primary">Voltar</Button></div>
+        <div className='my-3' style={{display:'flex',justifyContent:'space-between'}}><h5>Edit Token</h5>
+        <Link to='/'> <Button className="w-10 btn btn-sm btn-primary">Voltar</Button> </Link>
+        </div>
         
        {update&&<Formik
          validator={() => ({})}
@@ -74,7 +76,7 @@ const finalTokens=jsonToken.map(token=>{
 localStorage.setItem('tokens', JSON.stringify(finalTokens));
 const uptadedTokens=JSON.parse(localStorage.getItem('tokens'));
   setFinalToken(JSON.stringify(uptadedTokens))
-  navigate('/home')
+  navigate('/')
 }
       }}
       initialValues={{

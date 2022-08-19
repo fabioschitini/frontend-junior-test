@@ -1,9 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button,Col,Form} from 'react-bootstrap';
+import { Button,Form} from 'react-bootstrap';
 import { Formik } from 'formik';
-import { useNavigate,useLocation } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import * as yup from 'yup';
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
+import uuid from 'react-uuid'
+import { Link} from 'react-router-dom';
 
 
 
@@ -16,8 +18,6 @@ const schema = yup.object().shape({
   balance: yup.string().required("Esse campo é obrigatorio")
 });
 
-
-
     return(
         <div  style={{display:'flex',flexDirection:'center'}} className="container col-xl-10 col-xxl-8 px-4 py-5"> 
         <div style={{display:'flex',flex:'2'}} className="row align-items-center g-lg-5 py-5">
@@ -25,8 +25,9 @@ const schema = yup.object().shape({
         <div className='my-3' style={{display:'flex',justifyContent:'center'}}><h2>Klever</h2> </div>
         <div className='my-3' style={{display:'flex',justifyContent:'space-between'}}><h2>Wish Wallet</h2> </div>
         <div className='my-3' style={{display:'flex',justifyContent:'space-between'}}><h5>Add Token</h5>
-        <Button className="w-10 btn btn-sm btn-primary">Voltar</Button></div>
-        
+      <Link to='/'> <Button className="w-10 btn btn-sm btn-primary">Voltar</Button> </Link>
+      
+      </div>
    <Formik
          validator={() => ({})}
          validationSchema={schema}
@@ -37,19 +38,20 @@ setTokenError('This token name is already being used, please choose another!')
 }
 else{
 let addedToken={
-  id:'4',
+  id:uuid(),
   name:values.token,
   balance:values.balance
 }
 jsonToken.push(addedToken)
 localStorage.setItem('tokens', JSON.stringify(jsonToken));
 const uptadedTokens=JSON.parse(localStorage.getItem('tokens'));
+console.log(uptadedTokens)
 setFinalToken(JSON.stringify(uptadedTokens))
-navigate('/home')
+navigate('/')
 }
       }}
       initialValues={{
-        token: 'KLV',
+        token: '',
         balance:''
       }}
     >
