@@ -5,6 +5,8 @@ import { useNavigate,useLocation } from "react-router-dom";
 import * as yup from 'yup';
 import { useState,useEffect } from 'react';
 import { Link} from 'react-router-dom';
+import { ReactComponent as KleverLogo } from './assets/logo.svg';
+import { ReactComponent as StarLogo } from './assets/shooting-star.svg';
 
 const Add=()=>{
   const [tokenError,setTokenError]=useState(false)
@@ -47,10 +49,15 @@ const Delete=()=>{
         <div  style={{display:'flex',flexDirection:'center'}} className="container col-xl-10 col-xxl-8 px-4 py-5"> 
         <div style={{display:'flex',flex:'2'}} className="row align-items-center g-lg-5 py-5">
         <div  style={{display:'flex',flexDirection:'column',flexGap:'1rem'}} className="col-md-10 mx-auto col-lg-7"> 
-        <div className='my-3' style={{display:'flex',justifyContent:'center'}}><h2>Klever</h2> </div>
-        <div className='my-3' style={{display:'flex',justifyContent:'space-between'}}><h2>Wish Wallet</h2> </div>
+        <div className='my-3' style={{display:'flex',justifyContent:'center'}}><KleverLogo style={{height:'3rem'}} /> </div>
+        <div className='my-3' style={{display:'flex',justifyContent:'space-between'}}>
+        <div style={{display:'flex'}}>
+            <StarLogo style={{height:'3rem',color:'white'}}/>
+            <h2>Wish Wallet</h2> 
+            </div>
+          </div>
         <div className='my-3' style={{display:'flex',justifyContent:'space-between'}}><h5>Edit Token</h5>
-        <Link to='/'> <Button className="w-10 btn btn-sm btn-primary">Voltar</Button> </Link>
+        <Link to='/'> <Button style={{backgroundColor:'#641864',borderColor:'black'}} className="w-10 btn btn-sm btn-primary">Voltar</Button> </Link>
         </div>
         
        {update&&<Formik
@@ -104,7 +111,7 @@ const uptadedTokens=JSON.parse(localStorage.getItem('tokens'));
                 name="token"
                 value={values.token}
                 onChange={handleChange}
-                isInvalid={errors.token&&!tokenError}
+                isInvalid={errors.token||tokenError}
                 placeholder="Token..."
                 required
               />
@@ -127,8 +134,8 @@ const uptadedTokens=JSON.parse(localStorage.getItem('tokens'));
             </Form.Group>
 
             <div style={{display:'flex',justifyContent:'space-between'}}>
-            <Button onClick={()=>setShow(true)}    className="w-10 btn btn-sm btn-primary px-5 my-3 " >Delete</Button>
-            <Button  type="submit"  className="w-10 btn btn-sm btn-primary px-5 my-3 " >Save</Button>
+            <Button style={{backgroundColor:'#641864',borderColor:'black'}} onClick={()=>setShow(true)}    className="w-10 btn btn-sm btn-primary px-5 my-3 " >Delete</Button>
+            <Button style={{backgroundColor:'#641864',borderColor:'black'}}  type="submit"  className="w-10 btn btn-sm btn-primary px-5 my-3 " >Save</Button>
 </div>
         </Form>
       )}

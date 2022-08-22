@@ -14,7 +14,7 @@ test('render input with the value of the token you want to edit and the Delete B
     await expect(screen.getAllByRole('button')[1]).toHaveTextContent('Delete');
 });
 
-test('Whenc submit the token, if the token info is valid, then update the tokens and show the array', async() => {
+test('When you submit the token, if the token info is valid, then update the tokens and show the array', async() => {
     const tokens=[{id:'1',name:'KLV',balance:'10,250.50'},{id:'2',name:'DVK',balance:'50,250.71'},
     {id:'3',name:'KFI',balance:'10'}]
     const desiredTokens={id:'1',name:'ZXY',balance:'110,25.20'}

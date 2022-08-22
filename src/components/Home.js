@@ -34,7 +34,7 @@ useEffect(()=>{
             <StarLogo style={{height:'3rem',color:'white'}}/>
             <h2>Wish Wallet</h2> 
             </div>
-       <Link to='/add'> <Button  style={{backgroundColor:'#641864',borderBlockColor:'#641864'}}>Add Token</Button></Link>
+       <Link to='/add'> <Button  style={{backgroundColor:'#641864',borderColor:'black'}}>Add Token</Button></Link>
         </div>
 <div style={{display:'flex',flexDirection:'column'}}>
 <div className='my-0' style={{display:'flex',justifyContent:'space-between'}}><h5>Tokens</h5><h5>Balance</h5></div>
